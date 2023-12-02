@@ -1,4 +1,5 @@
 // You can also use CommonJS `require('@sentry/node')` instead of `import`
+import 'dotenv/config';
 import * as Sentry from "@sentry/node";
 import { ProfilingIntegration } from "@sentry/profiling-node";
 import express from "express";
