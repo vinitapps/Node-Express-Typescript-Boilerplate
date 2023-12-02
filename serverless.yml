@@ -1,0 +1,18 @@
+org: vinitpdev
+app: aws-node-express-api-projec
+service: aws-node-express-api-projec
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: src/index.handler
+    events:
+      - httpApi: '*'
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline

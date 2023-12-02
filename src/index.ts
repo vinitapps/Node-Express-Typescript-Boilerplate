@@ -3,6 +3,7 @@ import 'dotenv/config';
 import * as Sentry from "@sentry/node";
 import { ProfilingIntegration } from "@sentry/profiling-node";
 import express from "express";
+import serverless from "serverless-http";
 
 const app = express();
 
@@ -48,6 +49,4 @@ app.get("/debug-sentry", function mainHandler(req, res) {
 });
 
 
-app.listen(3000);
-
-console.log("I am running very fine v3");
+export const handler = serverless(app);

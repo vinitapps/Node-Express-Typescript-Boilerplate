@@ -4,3 +4,5 @@ dist/
 *.lock
 # Sentry Config File
 .sentryclirc
+.build/
+build/
